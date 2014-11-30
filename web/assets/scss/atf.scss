@@ -111,15 +111,6 @@ header.global {
       display: none;
     }
 
-    .lyric {
-      opacity: 0;
-      transition: 0.5s;
-    }
-
-    .lyric-animation {
-      opacity: 1;
-      transition: 0.5s;
-    }
   }
 
   .l1 {
@@ -188,22 +179,22 @@ header.global {
   }
 
   .github {
-    background: url("../img/social-sprites.png");
+    background: url("assets/img/social-sprites.png");
     background-position: 0px 0px;
   }
 
   .twitter {
-    background: url("../img/social-sprites.png");
+    background: url("assets/img/social-sprites.png");
     background-position: 384px 0px;
   }
 
   .instagram {
-    background: url("../img/social-sprites.png");
+    background: url("assets/img/social-sprites.png");
     background-position: 256px 0px;
   }
 
   .email {
-    background: url("../img/social-sprites.png");
+    background: url("assets/img/social-sprites.png");
     background-position: 128px 0px;
   }
 
@@ -241,27 +232,4 @@ header.global {
 
 .cf {
   clear: both;
-}
-
-footer.global {
-  background: #222;
-  color: #aaa;
-  padding: 20px 0;
-  text-align: center;
-  font-size: 13px;
-
-  a {
-    color: #aaa;
-    text-decoration: none;
-    transition: color 0.25s;
-  }
-  a:hover {
-    color: #fff;
-  }
-}
-
-
-pre, code {
-  font-family: 'Ubuntu Mono', monospace;
-  font-size: 18px;
 }
