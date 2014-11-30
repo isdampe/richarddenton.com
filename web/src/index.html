@@ -1,0 +1,43 @@
+{% include: 'header.html' @title:'Richard Denton - isdampe - Web developer in Melbourne' %}
+
+	<section id="content" class="content">
+		<div class="about-wrapper">
+			<div class="image">
+				<div class="space-oddity" id="space-oddity">
+					<span class="lyric" data-lyric="true">Ground control to Major Tom,</span><br />
+					<span class="lyric" data-lyric="true">Your circuit's dead, there's something wrong,</span><br />
+					<span class="lyric" data-lyric="true">Can you hear me Major Tom?</span><br />
+					<span class="lyric" data-lyric="true">Can you hear me Major Tom?</span><br />
+					<span class="lyric" data-lyric="true">Can you hear me Major Tom?</span>
+				</div>
+				<img id="rocket" class="shake" src="assets/img/rocket.png" alt="Rocket" />
+			</div>
+			<article>
+				<h1 id="title">Salvete.<sup class="help" id="help" data-val="Hello.">[?]</sup></h1>
+				<p>I am Richard Denton, a web developer from the<br />
+					Melbourne area in Australia.</p>
+
+				<p><span class="l1">I spend a lot of my time utilizing the following</span><br />
+						<span class="l2">web technologies</span></p>
+
+				<ul>
+					<li class="l3">NodeJS</li>
+					<li class="l4">PHP</li>
+					<li class="l5">MySQL</li>
+					<li class="l6">Wordpress</li>
+					<li class="l7">SASS</li>
+					<li class="l8">HTML5</li>
+					<li class="l9">Javascript</li>
+				</ul>
+				<p><span class="l10">I own and operate Evasive Software Pty Ltd,</span><br />
+					<span class="l11">where we primarily help local businesses</span><br />
+					<span class="l12">develop respectible online profiles and websites.</span></p>
+				<p>You can get in touch with me via the big buttons below.</p>
+			</article>
+
+			{% include: 'social.html' %}
+
+		</div>
+	</section>
+
+{% include: 'footer.html' %}
