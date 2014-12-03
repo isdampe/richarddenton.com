@@ -28,6 +28,20 @@ $(document).ready( function() {
 		},50);
 	});
 
+	//Images.
+	$("[data-images=true] img").on("click", function(e){
+		e.preventDefault();
+		var parent = $(this).parent();
+		var att = $(parent).attr("data-active");
+		if ( ! att || att === "inactive" ) {
+			$(parent).children("img").addClass("full");
+			$(parent).attr("data-active", "active");
+		} else {
+			$(parent).children("img").removeClass("full");
+			$(parent).attr("data-active", "inactive");
+		}
+	});
+
 });
 
 function doSpaceOddity(){

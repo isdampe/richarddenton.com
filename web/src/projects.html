@@ -1,0 +1,42 @@
+{% include: 'header.html' @title:'Projects - Richard Denton' %}
+
+  <section id="content" class="content">
+    <div class="wrapper">
+      <article>
+
+        <h1 id="title">Officium.<sup class="help" id="help" data-val="Projects.">[?]</sup></h1>
+        <p>In an ideal world, I'd spend a bunch more time working on open source software. Unfortunately, my circumstances don't really allow for that currently.<p>
+        <p>Here's a couple of active side projects I spend my spare time hacking away at.</p>
+
+        <section class="project" id="notedown">
+          <h2>Notedown</h2>
+          <p>Notedown is a cross-platform desktop application, that allows you to keep notes in the popular web syntax <a href="#">Markdown.</a></p>
+          <p>It's built with HTML5 / CSS3 / JS, and is wrapped in the <a href="#">node-webkit</a> chromium wrapper.</p>
+          <p>It's free software, released under the MIT license.</p>
+          <p><a href="https://github.com/isdampe/Notedown">Notedown on Github</a></p>
+          <div class="images" data-images="true">
+            <img src="assets/img/notedown-1.png" alt="Notedown editor" />
+            <img src="assets/img/notedown-2.png" alt="Notedown markdown view" />
+          </div>
+        </section>
+
+        <section class="project" id="notedown">
+          <h2>PrettyPress</h2>
+          <p>PrettyPress is a Wordpress plugin that provides a modern post editor for established and fast work flow.</p>
+          <p>As well as a markdown editor, it also provides the user a live preview of their post while they type.</p>
+          <p><a href="https://github.com/isdampe/Notedown">PrettyPress on Github</a> - <a href="https://wordpress.org/plugins/prettypress/">PrettyPress on Wordpress.org</a> - <a href="http://pro.evasivesoftware.com">PrettyPress Pro</a></p>
+          <div class="videos">
+            <video autoplay loop>
+              <source src="assets/vid/prettypress-main-preview.webm" type="video/webm;" />
+              <source src="assets/vid/prettypress-main-preview.mp4" type="video/mp4;" />
+            </video>
+          </div>
+        </section>
+
+        {% include: 'social.html' %}
+
+      </article>
+    </div>
+  </section>
+
+{% include: 'footer.html' %}
