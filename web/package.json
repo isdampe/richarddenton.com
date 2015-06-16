@@ -7,6 +7,7 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-contrib-concat": "*",
     "grunt-autoprefixer": "*",
-    "grunt-simple-include": "*"
+    "grunt-simple-include": "*",
+		"grunt-minify-html": "*"
   }
 }

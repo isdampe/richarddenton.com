@@ -6,7 +6,7 @@
 		If you want to see what's going on, you should check it out at https://github.com/isdampe/richarddenton.com.
 	-->
   <meta charset="utf-8">
-  <title>{{ title }}</title>
+  <title>Send me a message - Richard Denton</title>
   <meta name="description" content="{{ description }}">
   <!--[if lt IE 9]>
   <link rel="stylesheet" href="assets/css/legacy.css">
@@ -30,3 +30,60 @@
       </nav>
     </div>
   </header>
+
+
+	<section id="content" class="content">
+		<div class="wrapper">
+			<article>
+
+				<h1 id="title">Conact</h1>
+				<p>Thanks for checking out my site.</p>
+				<p>I can be found on the usual social networking hubs (see buttons below), or you can send me a message directly by filling in the form below.</p>
+
+				<form class="form" data-validate="true" action="/contact.php" method="post">
+					<input type="text" data-required="true" name="c_name" placeholder="Your name *" />
+					<input type="email" data-required="true" name="c_email" placeholder="Your email address *" />
+					<input class="last" data-required="true" type="text" name="c_subject" placeholder="Subject *" />
+					<textarea name="c_message" data-required="true" placeholder="Your message *"></textarea>
+					<input type="submit" class="submit" id="submit" value="Send message" />
+					<div class="cf"></div>
+				</form>
+				<div id="loading"></div>
+
+				<section class="social">
+  <a class="icon github" href="https://github.com/isdampe" rel="nofollow">@isdampe on Github</a>
+  <a class="icon twitter" href="https://twitter.com/isdampe" rel="nofollow">@isdampe on Twitter</a>
+  <a class="icon instagram" href="https://instagram.com/isdampe/" rel="nofollow">@isdampe on Instagram</a>
+  <a class="icon email" href="#email" data-email="true" rel="nofollow">isdampe [at] gmail [dot] com</a>
+</section>
+
+
+			</article>
+		</div>
+	</section>
+
+<footer class="global">
+  <div class="wrapper">
+    <p>See you around.</p>
+  </div>
+</footer>
+
+
+<script>
+	var ss = window.document.createElement('link'),
+  ref = window.document.getElementsByTagName('head')[0];
+  ss.rel = 'stylesheet';
+  ss.href = 'assets/css/global.min.css';
+  ss.media = 'only x';
+  ref.parentNode.insertBefore(ss, ref);
+  setTimeout( function(){
+    ss.media = 'all';
+  },0);
+</script>
+<script async src="assets/js/app.min.js"></script>
+<noscript>
+  <link rel="stylesheet" href="assets/css/global.min.css">
+</noscript>
+</body>
+</html>
+

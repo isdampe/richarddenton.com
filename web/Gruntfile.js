@@ -16,7 +16,7 @@ module.exports = function (grunt) {
 	        separator: ';'
 	      },
 	      dist: {
-	        src: ['assets/js/vendor/jquery-1.11.1.min.js', 'assets/js/build/app.min.js', 'assets/js/build/ga.min.js', 'assets/js/build/css.min.js'],
+	        src: ['assets/js/vendor/jquery-1.11.1.min.js', 'assets/js/vendor/sweetalert.min.js',  'assets/js/build/app.min.js', 'assets/js/build/ga.min.js'],
 	        dest: 'assets/js/app.min.js'
 	      },
 
@@ -34,14 +34,30 @@ module.exports = function (grunt) {
 	    watch: {
 	        js:  { files: 'assets/js/src/*.js', tasks: [ 'uglify', 'concat' ] },
 	        css: { files: 'assets/css/global-noprefix.min.css', tasks: ['autoprefixer'] },
-          html: { files: 'src/*.html', tasks: [ 'simple_include' ] }
+          html: { files: 'src/*.html', tasks: [ 'simple_include', 'minifyHtml' ] }
 	    },
       simple_include: {
         your_target: {
           src: ['src/*.html'],
-          dest: 'src/../'
+          dest: 'src/../build/'
         },
-      }
+      },
+			minifyHtml: {
+        options: {
+            cdata: false,
+            comments: false
+        },
+        dist: {
+            files: {
+                'build/../index.html': 'build/index.html',
+                'build/../contact.html': 'build/contact.html',
+                'build/../header.html': 'build/header.html',
+                'build/../footer.html': 'build/footer.html',
+                'build/../projects.html': 'build/projects.html',
+                'build/../social.html': 'build/social.html'
+            }
+        }
+    	}
 	});
 
 	// load plugins
@@ -50,10 +66,11 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-autoprefixer');
+	grunt.loadNpmTasks('grunt-minify-html');
 
 
 
 	// register at least this one task
-	grunt.registerTask('default', [ 'uglify', 'concat', 'autoprefixer', 'simple_include' ]);
+	grunt.registerTask('default', [ 'uglify', 'concat', 'autoprefixer', 'simple_include', 'minifyHtml' ]);
 
 };

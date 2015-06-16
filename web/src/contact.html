@@ -4,18 +4,19 @@
 		<div class="wrapper">
 			<article>
 
-				<h1 id="title">Contages.<sup class="help" id="help" data-val="Contact.">[?]</sup></h1>
-				<p>Thank-you for checking out my site.</p>
+				<h1 id="title">Conact</h1>
+				<p>Thanks for checking out my site.</p>
 				<p>I can be found on the usual social networking hubs (see buttons below), or you can send me a message directly by filling in the form below.</p>
 
-				<form class="form" action="/contact" method="post">
-					<input type="text" name="c_name" placeholder="Your name *" />
-					<input type="email" name="c_email" placeholder="Your email address *" />
-					<input class="last" type="text" name="c_subject" placeholder="Subject *" />
-					<textarea name="c_message" placeholder="Your message *"></textarea>
-					<input type="submit" class="submit" value="Send message" />
+				<form class="form" data-validate="true" action="/contact.php" method="post">
+					<input type="text" data-required="true" name="c_name" placeholder="Your name *" />
+					<input type="email" data-required="true" name="c_email" placeholder="Your email address *" />
+					<input class="last" data-required="true" type="text" name="c_subject" placeholder="Subject *" />
+					<textarea name="c_message" data-required="true" placeholder="Your message *"></textarea>
+					<input type="submit" class="submit" id="submit" value="Send message" />
 					<div class="cf"></div>
 				</form>
+				<div id="loading"></div>
 
 				{% include: 'social.html' %}
 

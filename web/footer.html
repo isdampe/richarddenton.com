@@ -1,14 +1,11 @@
-<footer class="global">
-  <div class="wrapper">
-    <p>Copyright &copy; 2014 Richard Denton.</p>
-    <p>You're free to use any code snippets or other tips you find on this website however you wish.</p>
-  </div>
-</footer>
-
-
-<script async src="assets/js/app.min.js"></script>
-<noscript>
-  <link rel="stylesheet" href="assets/css/global.min.css">
-</noscript>
-</body>
-</html>
+<footer class=global><div class=wrapper><p>See you around.</p></div></footer><script>
+	var ss = window.document.createElement('link'),
+  ref = window.document.getElementsByTagName('head')[0];
+  ss.rel = 'stylesheet';
+  ss.href = 'assets/css/global.min.css';
+  ss.media = 'only x';
+  ref.parentNode.insertBefore(ss, ref);
+  setTimeout( function(){
+    ss.media = 'all';
+  },0);
+</script><script async src=assets/js/app.min.js></script><noscript><link rel=stylesheet href=assets/css/global.min.css></noscript>
