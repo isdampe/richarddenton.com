@@ -1,5 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic|Varela+Round|Ubuntu+Mono);
 
+@mixin breakpoint($point) {
+  @media (max-width: $point) { @content; }
+}
+
 body {
   margin: 0;
   color: #333;
@@ -11,13 +15,23 @@ body {
   width: 1240px;
   margin: 0 auto;
   padding: 0 30px;
+	@include breakpoint(1300px) {
+		width: 98%;
+		padding: 0;
+	}
 }
 
 header.global {
   height: 100px;
-
   background: #222;
   color: #aaa;
+	
+	@include breakpoint(640px) {
+		height: 60px;
+		padding: 0 15px;
+		box-sizing: border-box;
+	}
+	
   a {
     color: #aaa;
     text-decoration: none;
@@ -33,15 +47,34 @@ header.global {
     width: 116px;
     height: 26px;
     margin-top: 40px;
+		
+		@include breakpoint(640px) {
+			margin-top: 22px;
+			width: 75px;
+			height: auto;
+			
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
   }
 
   nav {
     float: right;
     text-align: right;
     margin-top: 52px;
+		
+		@include breakpoint(640px) {
+			margin-top: 24px;
+			font-size: 13px;
+		}
 
     a {
       margin-left: 1.5em;
+			@include breakpoint(640px) {
+				margin-left: 1em;
+			}
     }
 
   }
@@ -50,30 +83,50 @@ header.global {
 
 .content {
   margin: 46px 0;
+	@include breakpoint(1000px) {
+		margin: 22px 0;
+	}
+	@include breakpoint(640px) {
+		margin: 15px 0;
+	}
 
   a {
     color: #000;
   }
 
   article {
+		
+		@include breakpoint(640px) {
+			box-sizing: border-box;
+			padding: 0 10px;
+		}
 
     h1 {
       color: #aaa;
       font-weight: 100;
       font-size: 42px;
       margin: 0 0 0.5em 0;
+			@include breakpoint(1000px) {
+				font-size: 34px;
+			}
+			@include breakpoint(640px) {
+				font-size: 28px;
+			}
 
-      .help {
-        font-size: 14px;
-        color: #333;
-        vertical-align: top;
-        cursor: pointer;
-      }
     }
+		h2 {
+			@include breakpoint(640px) {
+				font-size: 20px;
+			}
+		}
 
     p {
       line-height: 1.5em;
       margin: 0 0 2.1em 0;
+			@include breakpoint(640px) {
+				margin: 0 0 1em 0;
+				font-size: 13px;
+			}
     }
 
     ul {
@@ -93,9 +146,18 @@ header.global {
   position: relative;
   width: 710px;
   margin: 0 auto;
+	@include breakpoint(750px) {
+		width: 100%;
+	}
 
   article {
     margin-left: 310px;
+		@include breakpoint(750px) {
+			margin-left: 0;
+			box-sizing: border-box;
+			padding: 0 10px;
+			font-size: 14px;
+		}
   }
 
   .image {
@@ -105,69 +167,107 @@ header.global {
     width: 347px;
     height: 371px;
     cursor: pointer;
+		@include breakpoint(750px) {
+			position: static;
+			top: auto;
+			left: auto;
+			width: 75%;
+			max-width: 180px;
+			height: auto;
+			text-align: center;
+			margin: 20px auto;
+			
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
 
-    .space-oddity {
-      position: absolute;
-      margin-left: -250px;
-      font-size: 13px;
-      font-family: 'Varela Round', sans-serif;
-      line-height: 1.5em;
-      display: none;
-    }
-
-    .lyric {
-      opacity: 0;
-      transition: 0.5s;
-    }
-
-    .lyric-animation {
-      opacity: 1;
-      transition: 0.5s;
-    }
+    
   }
+	
+	ul {
+		@include breakpoint(750px) {
+			margin: 0 0 1em 0;
+			padding: 0 0 0 1em;
+		}
+	}
 
   .l1 {
     padding-left: 25px;
+		@include breakpoint(750px) {
+			padding-left: 0;
+		}
   }
 
   .l2 {
     padding-left: 38px;
+		@include breakpoint(750px) {
+			padding-left: 0;
+		}
   }
 
   .l3 {
     padding-left: 22px;
+		@include breakpoint(750px) {
+			padding-left: 0;
+		}
   }
 
   .l4 {
     padding-left: 29px;
+		@include breakpoint(750px) {
+			padding-left: 0;
+		}
   }
 
   .l5 {
     padding-left: 30px;
+		@include breakpoint(750px) {
+			padding-left: 0;
+		}
   }
 
   .l6 {
     padding-left: 31px;
+		@include breakpoint(750px) {
+			padding-left: 0;
+		}
   }
 
   .l7 {
     padding-left: 27px;
+		@include breakpoint(750px) {
+			padding-left: 0;
+		}
   }
 
   .l8 {
     padding-left: 23px;
+		@include breakpoint(750px) {
+			padding-left: 0;
+		}
   }
 
   .l9 {
     padding-left: 16px;
+		@include breakpoint(750px) {
+			padding-left: 0;
+		}
   }
 
   .l10 {
     padding-left: 30px;
+		@include breakpoint(750px) {
+			padding-left: 0;
+		}
   }
 
   .l11 {
     padding-left: 15px;
+		@include breakpoint(750px) {
+			padding-left: 0;
+		}
   }
 
 }
@@ -224,6 +324,11 @@ header.global {
     margin-right: 2%;
     border: 1px solid #aaa;
     transition: border 0.5s;
+		@include breakpoint(750px) {
+			width: 100%;
+			float: none;
+			margin-bottom: 5px;
+		}
   }
   input:focus, textarea:focus {
     border: 1px solid #000;
@@ -243,13 +348,22 @@ header.global {
     background: #222;
     color: #fff;
     border-style: none;
+		@include breakpoint(750px) {
+			width: 100%;
+		}
   }
 }
 
-.project {
+.project:first-of-type {
+	padding-top: 0;
+}
 
+.project {
   padding: 40px 0;
   border-bottom: 1px solid #ccc;
+	@include breakpoint(640px) {
+		padding: 20px 0;
+	}
 
   .videos {
     width: 1234px;
@@ -257,11 +371,18 @@ header.global {
     overflow: hidden;
     text-align: center;
     margin: 0 auto;
+		@include breakpoint(1280px) {
+			width: 100%;
+		}
 
     video {
       width: 1280px;
       height: 720px;
       margin-left: -23px;
+			@include breakpoint(1280px) {
+				width: 100%;
+				height: auto;
+			}
     }
   }
 
@@ -284,6 +405,10 @@ header.global {
       width: auto;
       height: auto;
       padding: 0;
+			@include breakpoint(640px) {
+				width: 100%;
+				height: auto;
+			}
     }
 
     img.full:hover {
